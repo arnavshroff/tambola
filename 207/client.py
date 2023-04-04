@@ -296,13 +296,3 @@ def setup():
 
 
 setup()
-
-
-#CHANGES MADE
-# First recv message from server
-# Show the Flash Number
-# chnaged marked number button background to green
-# check player is win or lose the game
-# change game over to True when player lose the game
-# show wrong marking
-# chnage game over to True when one of the player win the game
