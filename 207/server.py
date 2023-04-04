@@ -12,8 +12,6 @@ flashNumberList =[ i  for i in range(1, 91)]
 gameOver = False
 playersJoined = False
 
-
-#
 def handleClient():
     global CLIENTS
     global flashNumberList
@@ -25,7 +23,7 @@ def handleClient():
             break
 
         try:
-            # Atleast two player required to play this game
+           
             if(len(list(CLIENTS.keys())) >=2 and not gameOver):
                 if(not playersJoined):
                     playersJoined = True
@@ -44,10 +42,10 @@ def handleClient():
 
                         flashNumberList.remove(int(randomNumber))
                     except:
-                        # Removing Player cleint when they close / terminate the session
+                        
                         del CLIENTS[currentName]
 
-                    # After Every 3 Seconds we are sending one number to each CLIENT
+                   
                     time.sleep(3)
                 else:
                     gameOver = True
@@ -117,8 +115,3 @@ def setup():
 
 
 setup()
-
-#CHANGES  MADE
-# recvMessage from CLIENT
-# add game over Functionality in handleClient method
-# when one of the player wins the game change game over to True for all the Players
