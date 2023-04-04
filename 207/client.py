@@ -89,7 +89,7 @@ def placeNumbers():
     for row in range(0,3):
         randomColList = []
         counter = 0
-        # getting random 5 cols
+       
         while counter<=4:
             randomCol = random.randint(0,8)
             if(randomCol not in randomColList):
